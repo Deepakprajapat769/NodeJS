@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Email Verification</h1>
+    <p>Please enter the verification code sent to your email address.</p>
+
+    <form action="/auth/sendVerifymail" method="POST">
+        <input type="email" name="email" placeholder="Enter Verification Code" required>
+        <button type="submit">Verify</button>
+    </form>
+
+    <p><a href="/auth/resend-verification">Resend Verification Email</a></p>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
